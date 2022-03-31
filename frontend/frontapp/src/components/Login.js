@@ -17,6 +17,7 @@ class Login extends Component {
     .then(
       data => {
         console.log(data.token);
+        this.props.userLogin(data.token);
       }
     ).catch( error => console.log(error))
   }
@@ -61,7 +62,7 @@ class Login extends Component {
               <br/>
             </label>
             <button onClick={this.login}>Login</button>
-           `<button onClick={this.signUp}>SignUp</button>
+            <button onClick={this.signUp}>SignUp</button>
         </div>
   );
 }

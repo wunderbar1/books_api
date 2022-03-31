@@ -7,15 +7,15 @@ function App() {
 
   const [token, setToken] = useState('')
 
-  const userLogin = (token) => {
-    setToken(token);
+  const userLogin = (tok) => {
+    setToken(tok);
   }
 
   return (
     <div className="App">
         <h1>Main Page</h1>
         <Login userLogin={userLogin}/>
-        <Books />
+        <Books token={token}/>
     </div>
   );
 }
