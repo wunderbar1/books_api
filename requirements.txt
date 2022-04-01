@@ -22,4 +22,4 @@ pytz==2022.1
 sqlparse==0.4.2
 tomli==2.0.1
 tzdata==2022.1
--e git+https://github.com/bartdob/books_api.git@2f8a1f132a49486f61f18b20288988e6744c52a2#egg=UNKNOWN
+# -e git+https://github.com/bartdob/books_api.git@2f8a1f132a49486f61f18b20288988e6744c52a2#egg=UNKNOWN
