@@ -16,8 +16,10 @@ pycodestyle==2.8.0
 pyflakes==2.4.0
 pyparsing==3.0.7
 pytest==7.1.1
+pytest-django==4.5.2
 python-decouple==3.6
 pytz==2022.1
 sqlparse==0.4.2
 tomli==2.0.1
 tzdata==2022.1
+-e git+https://github.com/bartdob/books_api.git@2f8a1f132a49486f61f18b20288988e6744c52a2#egg=UNKNOWN
