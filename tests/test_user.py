@@ -1,10 +1,6 @@
-# import pytest
-# from django.contrib.auth.models import User
-#
-#
-# @pytest.mark.skip("skipped for now")
-# @pytest.mark.django_db
-# def test_user_create():
-#     User.objects.create_user('test', 'test@test.pl', 'test')
-#     User.objects.create_user('test1', 'test1@test.pl', 'test1')
-#     assert User.objects.count() == 2
+from django.contrib.auth.models import User
+
+
+def test_should_create_user_with_username(db) -> None:
+    user = User.objects.create_user("Haki")
+    assert user.username == "Haki"

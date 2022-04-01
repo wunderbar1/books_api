@@ -6,3 +6,8 @@ class Book(models.Model):
 
     def __str__(self):
         return self.title
+
+    def create_book(self, title):
+        book = self.create(title=title)
+        # do something with the book
+        return book

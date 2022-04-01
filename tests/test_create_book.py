@@ -1,10 +1,20 @@
-# import pytest
-# from api.models import Book
-#
-#
-# @pytest.mark.filterwarnings
-# @pytest.mark.django_db
-# def book_model_create():
-#     Book.objects.create_user('title1')
-#     Book.objects.create_user('title2')
-#     assert Book.objects.count() == 2
+import pytest
+from api.models import Book
+
+
+@pytest.mark.filterwarnings
+@pytest.mark.django_db
+def test_book_model():
+    book = Book.objects.create(title="Pan")
+    assert book.title == "Pan"
+    assert Book.objects.count() == 1
+
+
+@pytest.mark.filterwarnings
+@pytest.mark.django_db
+def test_book_models_count():
+    Book.objects.create(title="Pan")
+    Book.objects.create(title="Pan 2")
+    assert Book.objects.count() == 2
+
+

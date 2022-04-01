@@ -40,9 +40,10 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
-    'api',
     'pytest',
+    'api',
 ]
+
 # noinspection SpellCheckingInspection
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
