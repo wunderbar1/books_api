@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import './App.css';
 import Login from './components/Login';
 import Books from './components/Books';
+import LoggedUser from './components/LoggedUser'
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
   if (token === '') {
     logginButton = <Login userLogin={userLogin}/>;
   } else {
-    logginButton = <div>You are logged</div>;
+    logginButton = <LoggedUser userLogin={userLogin}/>;
     booksButton = <Books token={token}/>;
     logoutButton = <a href="/" onClick={logout}>logout</a>
   }
@@ -31,7 +32,7 @@ function App() {
         {logoutButton}
         {logginButton}
         {booksButton}
-        
+
     </div>
   );
 }

@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Button } from 'react-bootstrap';
 
 class Books extends Component {
 
@@ -32,8 +33,8 @@ class Books extends Component {
                 {this.state.books.map(book => {
                     return <h3 key={book.id}> {book.title} </h3> 
                 })}
-                <button onClick={this.loadBooks}> Get Books
-                </button>
+                <Button onClick={this.loadBooks}> Get Books
+                </Button>
             </div>
       );
     }
